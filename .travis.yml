@@ -1,4 +1,6 @@
 language: java
+script:
+- ./gradlew jar distZip
 notifications:
   hipchat:
     rooms:
@@ -7,7 +9,7 @@ deploy:
   provider: releases
   api_key:
     secure: F7pVe0mrHlEi7oQeU/J0T0UWsA3PMuQCMmAN7o/JR8mDEjD255y37W+L6UMPiTQVaWSY6nMTAVcuubLxWmBCFEjDQkM82TBVawLVytc7Z7JmIDzq1bOypcvi/s+zGMzktPGzzEXbm3ClwY2gSWRozTmKszBFUexZgvv06CE6fhp0aw/8G9G1T+FG73VnyWzYfRJ9rfdItEi6XL1F/uFU/atW7ilJCHAHPcigu8Upb+ZuAB+ZB/WlDbRl60B4mCwea497tXaoSX6kW4LpmnPMhBNBnSvxZ86HmWTQOpMZr7fJy4YPN7btgtd2KsJz37WQoK0XbYRROfaZdV1gckWAnrnuEOK8/2lsqGV1pry4Z6p7eyAtLP+syq6o0VB3sM4s3x8Gc20geX8+3ts64qqzaR3QqR6IGMrFQTCp5IgbyezU3y/6cxCbtqloQMss13WIhgw6mrzp3dpjcxCNSVXn8XMUO9MRb/FJsWQbV+GAErnk5WScOQRtCVKMn0/aPTb7umRdD20AkQt6971dzO+SFCMRa/7ka1lQad1pPyNKVdhB45U7QsyZ9pNCLKA93UnEzwjVuKm7hrcbVE6YKNW7yrEU7Yk/JuHooh3f+6U8bdZOVEl5bBQRqj3if4XwdpEXx3enRrtNAMeZazofI5a/wIevVtrcX7tqaGM2wuSn8o4=
-  file: build/distributions/xlr-perforce-changelist-trigger-plugin-1.0.1.zip
+  file: build/distributions/xlr-perforce-changelist-trigger-plugin-1.0.2.zip
   skip_cleanup: true
   on:
     all_branches: true

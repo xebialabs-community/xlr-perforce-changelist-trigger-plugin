@@ -11,25 +11,13 @@ if perforceServer is None:
    print "No server provided"
    sys.exit(1)
 
-iServer = ServerFactory().getServer(perforceServer['url'], None)
+iServer = ServerFactory().getOptionsServer(perforceServer['url'], None)
+iServer.setUserName(perforceServer['username'])
+iServer.connect()
 
-print "***************** I have an iServer ************************"
-
-if username:
-   iServer.setUserName(username)
-else:
-   iServer.setUserName(perforceServer['username'])
-
-if password:
-   iServer.login(password)
-elif perforceServer['password']:
+if perforceServer['password']:
    iServer.login(perforceServer['password'])
-else:
-   iServer.connect()
 
-#iServer = ServerFactory().getServer("p4java://54.85.167.210:1666", None)
-#iServer.setUserName("bruno")
-#iServer.connect()
 
 changelists = iServer.getChangelists(1, None, None, None , False, False, False, False)
 

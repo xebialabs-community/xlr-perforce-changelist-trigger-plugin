@@ -13,7 +13,7 @@
         description="Address of the Perforce server"/>
     <property name="username" category="input" kind="string" required="true"
         description="Username of the connection"/>
-    <property name="password" password="true" category="input" kind="string" required="true"
+    <property name="password" password="true" category="input" kind="string" required="false"
         description="Password for this user"/>
     <property name="scriptLocation" default="perforce/TestConnection.py" hidden="true"/>
 </type>

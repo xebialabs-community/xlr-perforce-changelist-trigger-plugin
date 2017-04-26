@@ -16,7 +16,11 @@ if configuration is None:
    sys.exit(1)
 
 iServer = ServerFactory().getOptionsServer(configuration['port'], None)
+iServer.setUserName(configuration['username'])
 iServer.connect()
+
+if configuration['password']:
+    iServer.login(configuration['password'])
 
 serverInfo = iServer.getServerInfo()
 

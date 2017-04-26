@@ -13,8 +13,10 @@ if perforceServer is None:
 
 iServer = ServerFactory().getServer(perforceServer['url'], None)
 
+print "***************** I have an iServer ************************"
+
 if username:
-   iServer.setUserName(userName)
+   iServer.setUserName(username)
 else:
    iServer.setUserName(perforceServer['username'])
 

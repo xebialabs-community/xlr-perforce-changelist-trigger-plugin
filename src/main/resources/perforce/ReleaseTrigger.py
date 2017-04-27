@@ -9,11 +9,17 @@ from com.perforce.p4java.server import ServerFactory
 from com.perforce.p4java.option.server import GetChangelistsOptions
 from com.perforce.p4java.core import IChangelist
 from com.perforce.p4java.core.file import FileSpecBuilder
+from com.perforce.p4java import PropertyDefs
+from java.lang import System
 
 if perforceServer is None:
    sys.exit(1)
 
-iServer = ServerFactory().getOptionsServer(perforceServer['port'], None)
+props = System.getProperties()
+props.put(PropertyDefs.PROG_NAME_KEY, "P4-XL_Release")
+props.put(PropertyDefs.PROG_VERSION_KEY, "2.0.0")
+
+iServer = ServerFactory().getOptionsServer(perforceServer['port'], props)
 iServer.setUserName(perforceServer['username'])
 iServer.connect()
 

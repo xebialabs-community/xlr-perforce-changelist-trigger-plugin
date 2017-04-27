@@ -1,8 +1,8 @@
 # xlr-perforce-changelist-trigger-plugin
 
 ## Overview
-1.     The plugin will repeatedly query a Perforce repository using the latest Java interface JAR file (p4java-2017.1.1508216-bundle.jar the time of development) for the latest changelist applied to the repo.  The polling interval is configurable.          
-2.     Whenever the plugin detects a change in value of the latest changelist id, it will trigger a release off a template in XL Release.  The changelist id is passed to the release as a variable.
+- The plugin will repeatedly query a Perforce repository using the latest Java interface JAR file (p4java-2017.1.1508216-bundle.jar the time of development) for the latest changelist applied to the repo.  The polling interval is configurable.          
+-  Whenever the plugin detects a change in value of the latest changelist id, it will trigger a release off a template in XL Release.  The changelist id is passed to the release as a variable.
 
 ## Change history
 

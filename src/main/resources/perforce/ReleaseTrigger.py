@@ -6,22 +6,35 @@
 
 import sys
 from com.perforce.p4java.server import ServerFactory
+from com.perforce.p4java.option.server import GetChangelistsOptions
+from com.perforce.p4java.core import IChangelist
 
 if perforceServer is None:
-   print "No server provided"
    sys.exit(1)
 
-iServer = ServerFactory().getOptionsServer(perforceServer['url'], None)
+iServer = ServerFactory().getOptionsServer(perforceServer['port'], None)
 iServer.setUserName(perforceServer['username'])
 iServer.connect()
 
 if perforceServer['password']:
    iServer.login(perforceServer['password'])
 
+opts = GetChangelistsOptions()
+opts.setMaxMostRecent(1)
+opts.setType(IChangelist.Type.SUBMITTED)
 
-changelists = iServer.getChangelists(1, None, None, None , False, False, False, False)
+if workspace:
+    opts.setClientName(workspace)
+
+changelists = iServer.getChangelists(None, opts)
+
+iServer.disconnect()
 
 changelistId = str(0)
 for cl in changelists:
   changelistId = str(cl.id)
+  with open('/tmp/trigger.out', 'w+') as f:
+      f.write("Latest change : {}\n".format(changelistId))
+
 triggerState = changelistId
+

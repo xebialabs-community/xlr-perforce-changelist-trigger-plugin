@@ -24,6 +24,8 @@
 
 #### Perforce trigger
 - Then define a release trigger that references the server. Note that the changelist id is available as a trigger variable. 
+- You can filter the changes that trigger the release by a workspace. Map the depot paths you want to watch in a new workspace,
+  then configure the release trigger to use that workspace.
 
 ![screenshot of perforce trigger config](images/xlr-perforce-changelist-trigger-plugin-config-2.png)
 

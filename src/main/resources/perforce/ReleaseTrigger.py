@@ -13,7 +13,8 @@ from com.perforce.p4java import PropertyDefs
 from java.lang import System
 
 if perforceServer is None:
-   sys.exit(1)
+    print "No server provided"
+    sys.exit(1)
 
 props = System.getProperties()
 props.put(PropertyDefs.PROG_NAME_KEY, "P4-XL_Release")

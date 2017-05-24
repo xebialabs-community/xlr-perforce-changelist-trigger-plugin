@@ -1,4 +1,17 @@
-# xlr-perforce-changelist-trigger-plugin
+## XL Release Perforce Changelist Trigger plugin ##
+
+## CI status ##
+
+[![Build Status][xlr-perforce-changelist-trigger-plugin-travis-image]][xlr-perforce-changelist-trigger-plugin-travis-url]
+[![License: MIT][xlr-perforce-changelist-trigger-plugin-license-image]][xlr-perforce-changelist-trigger-plugin-license-url]
+![Github All Releases][xlr-perforce-changelist-trigger-plugin-downloads-image]
+
+[xlr-perforce-changelist-trigger-plugin-travis-image]: https://travis-ci.org/xebialabs-community/xlr-perforce-changelist-trigger-plugin.svg?branch=master
+[xlr-perforce-changelist-trigger-plugin-travis-url]: https://travis-ci.org/xebialabs-community/xlr-perforce-changelist-trigger-plugin
+[xlr-perforce-changelist-trigger-plugin-license-image]: https://img.shields.io/badge/License-MIT-yellow.svg
+[xlr-perforce-changelist-trigger-plugin-license-url]: https://opensource.org/licenses/MIT
+[xlr-perforce-changelist-trigger-plugin-downloads-image]: https://img.shields.io/github/downloads/xebialabs-community/xlr-perforce-changelist-trigger-plugin/total.svg
+
 
 ## Overview
 - The plugin will repeatedly query a Perforce repository using the latest Java interface JAR file (p4java-2017.1.1508216-bundle.jar the time of development) for the latest changelist applied to the repo.  The polling interval is configurable.          

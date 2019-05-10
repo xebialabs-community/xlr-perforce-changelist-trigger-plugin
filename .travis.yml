@@ -2,9 +2,8 @@ language: java
 script:
 - "./gradlew jar distZip"
 notifications:
-  hipchat:
-    rooms:
-      secure: a+Z+kNPc7cHUmQyVZZW9PBL5TYoDOGLZvjvbJeih4Z3hkK1jWkI1Vb7hy76yoMtGXhutgswmpn8GES4MbLC8kdyy8E+yDCPcl9f+axFE9mPFGpUSbl4pEjjeQ7+uH2Z60WOINX1SQ0V1pdN1kD/J+2P6ykKR0G17TIgH7JuRwWxM+G8UWAPx4bykKIpNMn9opxGJ4qr/cPZF15Wiz18XcGlhjDeAym2ntjB3ZnTi3Wv8kCkcG4SdIpMg7BJszq941NOkgZX+1rHzJhliIT6N3g2dhxlLiPBPsvBSARD0Q4lStriR1HwupBPNVYwPqIprVlxhduqd2L+ejt4p/Av+RfU4w4PIQ54Pa8hMEjp1oNGk2QKEEhaVQlp0o4+9yO1qcti6iqaKNC9AIAB8puF/X6Rno1TyVLVxTvHe0lFg/t4m4Vy8abUP/gp0dyy5mFIGbuivr4MS6mO8CsKVtHiLCqv5A0jyRhktXU1vCGa6pbwQZciABFWGhht1g1nal6/FrkgGbEgAtUOfAfnYpaZ339H9l9HtkMK8puHbqlP22JB2x6ZEUM/GiroVfhGrgbNK5cFCMNenK/Wdg1oiJwNW3kgqxjddPsmlnb1SGdfUXyIWxlD1qpV36WdMH9REbrYb6O6RystTlA8btRwrptBG6Iiu90PhjRM0BVPV9QAPfn8=
+  slack:
+    secure: UvE5Wb6sSr1HWulO0CAjYgRFPdYuLZawplqNh7eoqme7Od698GSHsarn1fBrLY58PhTl/GVr4TX/6Torrs18/yb1YC5Ay+ED30s8Q9WrTwUN6xhtk1rcj2DuhlufqEv2WS6OY3c0+7oUmYd2I+dftyg7fUVzxZRVezt36OAD7CW7UxnqpEP9MMw3O8++y2+5YliPOlDPdNTMnK7JoXoZAPQHjKifTvTzs5GgH40tQAaRXzjduymTL/E4jmWiFuembmhDx+fqFSLdrOdCRyXGMiKL7IiKtbOaSUNacy6rkuiOyByaV2vf6urIX0EE3oIcjBSOY1cwV6BVqukLak+1vleoVbGoUsIm1m2R8fdRITFnzqsN8yQmSUrmHPSQ+Nw74t2OaNp7croFtEOb9G0R0QVg/4ATzs+85PFhlWLv8vGgbtq/4E1MwfwaJH56NiFBEvWEd6T3n/fknxFutgk5IdvW9cjva3j2Q85olF/s5Vshp6gqhSHpVPkyTLiRCIhW2hNzy1CPpVTOBigxyioc/pCa6S7qrbuIlvBrLORNPiwTAEU60udxUfegqEG5VhGIPZJJ9d2HLuoRyuaQ3LCzh7VkNtj9peaHOYSe0I556xInUMauIsktVTrrwETvx/p2CntCGRLXomCi3rYfx4aP+YzfCE0+adrW5j0Yust1gYc=
 deploy:
   provider: releases
   api_key:
@@ -15,4 +14,3 @@ deploy:
     all_branches: true
     tags: true
     repo: xebialabs-community/xlr-perforce-changelist-trigger-plugin
-
